@@ -5,16 +5,16 @@ body{
     background-color: #D5DFE9;
 }
 
-li a{
+ul li a{
     text-decoration: none;
     color: white;
 }
 
-li a:visited{
+ul li a:visited{
     color: yellow;
 }
 
-li a:hover{
+ul li a:hover{
     border: 2px solid white;
     border-radius: 8px;
     padding: 10px;
@@ -81,6 +81,7 @@ p{
 
 #sources{
     margin-left: 30px;
+    line-height: 2;
 }
 
 #totop{
