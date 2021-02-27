@@ -45,7 +45,6 @@ nav ul li{
 }
 
 main{
-    border: 2px solid black;
     padding: 10px;
 }
 
@@ -77,7 +76,6 @@ p{
 }
 
 #references{
-    border-top: 2px solid black;
     margin-top: 10px;
 }
 
