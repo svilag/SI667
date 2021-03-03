@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1 id="top">The title of the data paper should focus on the data, e.g. “Geospatial data from the X project”. If the data is closely linked to a specific research paper, then “Data from Paper Title” is appropriate.</h1>
+        <h1 id="top">Data from Politwoops</h1>
         <nav>
             <ul>
                 <li><a href="#overview">1. Overview</a></li>
@@ -24,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <p class="heading" id="overview">1. Overview</p>
+        <h2 id="overview">1. Overview</h2>
 
         <p class="subheading">Paper Authors:</p>
         <ul id="authors">
@@ -35,99 +35,168 @@
 
         <p class="subheading">Abstract</p>
 
-        <p class="content">A short (100-250 word) summary of the dataset being described: what the data covers, how it was collected, how it is stored, and its reuse potential.</p>
+        <p class="content">
+            Politwoops is a digital archive hosted by ProPublica which publishes deleted tweets from public political officials or individuals campaigning to hold public office, 
+            while the accompanying dataset, in the form of a downloadable CSV file, offers further information on the owners of the accounts themselves such as political party, 
+            Twitter ID, and official government title. The tweets are collected using the Twitter API; Politwoops has its own Twitter account through which it follows officials and 
+            collects their tweets, taking note of which ones are subsequently deleted. The information in the CSV file is updated according to the needs of the archive; 
+            individuals who are no longer public figures and no longer tracked by the organization are removed from the file, while others are added when needed. 
+        </p>
+
+        <p class="content">
+            There are many possibilities for reuse of the data, though this reuse is contingent on legal and technical constraints imposed by Twitter. 
+            As the individuals whose tweets are contained in the archive are public figures holding public office, their deleted tweets and the attending metadata could be of interest to 
+            individuals such as academic researchers, journalists, legal professionals, teachers, and those who wish to reproduce the archive for different sectors or different regions. 
+        </p>
 
         <p class="subheading">Keywords</p>
 
-        <p class="content">keyword 1; keyword 2; etc.</p>
+        <p class="content">Twitter, Social Media, Politicians, Political Campaigns, Congress, House of Representatives, Federal Government, twarc, deleted tweets</p>
 
-        <p class="heading" id="datasetdescription">2. Dataset Description</p>
+        <h2 id="datasetdescription">2. Dataset Description</h2>
 
         <p class="subheading">File Format Names and Versions</p>
 
-        <p class="content">E.g. ASCII, CSV, Autocad, EPS, JPEG, Excel, SQL, etc.</p>
+        <p class="content">Copies of the tweets are hosted on the website; a CSV downloadable file for information regarding the account holders with tweet IDs is available.</p>
 
         <p class="subheading">Creation Dates</p>
 
-        <p class="content">The start and end dates of when the data was created (dd/mm/yyyy).</p>
+        <p class="content">July 2019 (date of creation for politicians tracked csv)- ongoing project</p>
 
         <p class="subheading"> Dataset Creators</p>
 
-        <p class="content">Please list anyone who helped to create the database (who may also not be an author of the data paper), including their roles and affiliations.</p>
+        <ul class="content">
+            <li>ProPublica: Houses the US version of Politwoops</li>
+            <li>The Sunlight Foundation: Originally housed the US Version of Politwoops before it was forced to shut down</li>
+            <li>Open State Foundation: Houses the Netherlands version of Politwoops, first instance of Politwoops</li>
+        </ul>
 
         <p class="subheading">Language</p>
 
-        <p class="content">Language.</p>
+        <p class="content">The website and dataset available are both written in English, though they were initially released in Dutch. The Dutch version is available at: <a href="https://politwoops.nl/" target="_blank">https://politwoops.nl/</a></p>
 
         <p class="subheading">Repository Location</p>
 
-        <p class="content">If already available, please include a permanent identifier such as a DOI that points to the online location of the dataset.</p>
+        <ul class="content">
+            <li>CSV of tracked politicians: <a href="https://www.propublica.org/datastore/dataset/politicians-tracked-by-politwoops" target="_blank">https://www.propublica.org/datastore/dataset/politicians-tracked-by-politwoops</a></li>
+            <li>Deleted tweets (website): <a href="https://projects.propublica.org/politwoops/" target="_blank">https://projects.propublica.org/politwoops/</a></li>
+        </ul>
 
         <p class="subheading">Publication Date</p>
 
-        <p class="content">If known, the date the dataset was published in the repository (dd/mm/yyyy).</p>
+        <p class="content">The English dataset and collection of tweets were made available in July 2019.</p>
 
         <p class="subheading">Spatial Coverage</p>
 
-        <p class="content">Description: Place names including country, region, town, of where the data was collected</p>
+        <p class="content">Description: The dataset covers public figures with political positions from the United States</p>
 
         <p class="subheading">Temporal Coverage</p>
 
-        <p class="content">The start and end dates of the period to which the data is relevant (dd/mm/yyyy). Data from excavation of a Roman site in England for example might have the dates AD250-AD350.</p>
+        <p class="content">The dataset was released in July 2019 and as of the writing of this paper (March 2021) is being continually updated.</p>
 
-        <p class="heading" id="methods">3. Methods</p>
+        <h2 id="methods">3. Methods</h2>
 
-        <p class="content">Describe the methods used to create the dataset (~200 words), including the specific steps used to create your collection or dataset.</p>
+        <p class="content">
+            The Politwoops dataset was and is created using a python-based tool called twarc, which interacts with the twitter API to store information about tweets. 
+            When downloaded, this data is stored in a CSV that stores a tweet ID rather than the tweet content, and when hosted on the ProPublica website, tweet content appears as expected. 
+            Some additional data is also included that is in addition to the data captured by twarc, including information about the politicians’ official title, gender, and candidate ID, if available. 
+            It is most likely that this additional information is gathered before the capture, since Politwoops has a list of politician accounts to follow and capture tweets for.
+        </p>
 
-        <p class="heading" id="reuse">4. Reuse Potential and Significant Properties</p>
+        <h2 id="reuse">4. Reuse Potential and Significant Properties</h2>
 
         <p class="subheading">Potential Reuse</p>
 
-        <p class="content">Please describe any communities that might be interested in this dataset.  These could be broad (e.g. “researchers) or niche (“quantitative social scientists from the university of Michigan). Also describe the ways in which your data could be reused by these communities. This might for example include aggregation, further analysis, reference, validation, teaching or collaboration.</p>
+        <p class="content">
+            This particular dataset and digital archive is ripe for reuse, and there exist several possible communities or individuals who could be interested in utilizing the gathered information. 
+            Researchers or scholars in field such as political science, communication, or media studies could reuse the data in order to study the rhetoric of the tweets themselves, 
+            the role of social media in the political field more broadly, or studying one or more of the individuals included in the dataset. In this instance, the researchers would most likely 
+            need continued access to the content of the tweets themselves, but in many cases would also need the information held in the CSV file regarding the owner of the account. In these cases, 
+            it’s likely that the CSV file would have to be maintained and remain downloadable so researchers if researchers wished to perform an analysis of the individuals whose tweets are being tracked. 
+        </p>
+
+        <p class="content">
+            It’s also possible that journalists could wish to use the data stored in this dataset; they would most likely need access to the content of the tweets and the metadata on the tweet itself 
+            including but not limited to the amount of time the tweet was initially available, when it was tweeted and when it was deleted, though journalists may also require access to the detailed 
+            information on the owner of the account which is available in the CSV file. 
+        </p>
+
+        <p class="content">
+            Other interested parties who wished to learn more about the context of the deleted tweets, such as interested private citizens or other politicians, could also make use of the dataset.
+        </p>
+
+        <p class="content">
+            The data, particularly pertaining to controversial tweets, could be used in the legal sector; if it were relevant to an ongoing court case or legal complaint, the reuse of the tweet’s content, as well as the metadata on its deletion would be pertinent. 
+        </p>
+
+        <p class="content">
+            Finally, The dataset and website could also be used as a teaching tool when it comes to curation of potentially problematic/constrained material and working around different terms of service/the limitations of services such as the Twitter API. 
+            In this case, the source code itself would have to be preserved in order to be studied and discussed, as well as the metadata on the preserved tweets and account owners. 
+        </p>
+
+        <p class="content">
+            The data held within the archive and the CSV file aren’t the only data points which have the potential to be reused by third parties, however. The code which Politwoops employs to collect the tweets is itself reused, 
+            and thus could be of interest to others who wish to create and disseminate a similar dataset pertaining to a different sector of public figures or else political figures residing in a different region. 
+        </p>
 
         <p class="subheading">Significant Properties</p>
 
-        <p class="content">For each of the potential reuses you’ve described, please describe the significant properties of the dataset. What characteristics, functionalities, or formats are key to supporting reuse?</p>
+        <p class="content">
+            One aspect of this dataset specific to Politwoops is that, legally, the tweets the dataset is known for cannot be archived offline and therefore are not downloadable. 
+            As such only tracked politicians exist in a csv that can be downloaded. The archive of tweets itself is only accessible through the Politwoops website.
+        </p>
+
+        <p class="content">
+            Another significant aspect of the Politwoops dataset is that politicians can opt out of being followed and included on the list of politicians tracked by Politwoops by emailing the company. 
+            As such, this dataset and the tweets associated with it necessarily has gaps with regards to politicians’ deleted tweets. 
+        </p>
 
         <p class="subheading">Constraints</p>
 
-        <p class="content">If relevant, please list any constraints (e.g. legal, ethical, technical) to this dataset’s reuse.</p>
+        <p class="content">
+            The most considerable constraint imposed on the collection and curation of the data included in this dataset is the use of the Twitter API. 
+            The API includes some technical constraints regarding what and how much data the collectors are able to amass and the formats in which said data can be made available. 
+            Should Twitter change the terms of services of the API, or else rescind the Developer’s Key then Politwoops would be unable to continue updating the dataset, something which has already happened before. 
+        </p>
 
-        <p class="heading" id="threatassessment">5. Threat Assessment</p>
+        <p class="content">
+            The use of the Twitter API also imposes legal constraints when it comes to the format of the dataset and the reuse of the data itself. As it stands, due to the terms of service of the API, 
+            the content of the tweets themselves cannot be made available or preserved in an offline format nor in any format other than that in which they originally appeared; for this reason, the tweets 
+            are hosted in the digital archive and are not included within the downloadable CSV file. Furthermore, identifying information about the account owners or authors of the tweets cannot be made available 
+            online unless such data is publicly available, and it is noted within the Politwoops website that the additional information available within the CSV file such as the account owner’s political party affiliation, 
+            federal campaign identification number, and official title is gathered from separate public data banks. 
+        </p>
+
+        <h2 id="threatassessment">5. Threat Assessment</h2>
 
         <p class="subheading">Curation to Date</p>
 
-        <p class="content">Describe and critique any preservation or curation actions that have been applied to this dataset to date.  Is this dataset well curated?  Or minimally curated?  What risk factors might it face?</p>
+        <p class="content">
+            The website that hosts the deleted tweets is well curated in that it provides the information that the curators want it to provide; however, from a metadata perspective, 
+            the information about each object (tweet) is sparse or incomplete. Metadata includes the author of the tweet, a parenthetical indication of the author’s party affiliation and state, 
+            the twitter handle of the author, how long it took for the tweet to be deleted, and when the tweet was deleted. In addition to this information, some objects have additional information noting that Politwoops 
+            no longer follows the account associated with the author of the tweet and information about the original tweet if the deleted tweet was retweeted. Because this information cannot be stored offline, 
+            it is at risk of being lost if the site went down. 
+        </p>
 
         <p class="subheading">Threats to File Formats</p>
 
-        <p class="content">Evaluate the risks associated with each file format used by this dataset (the Library of Congress Digital Preservation Site provides detailed information about the sustainability of many formats: https://www.loc.gov/preservation/digital/formats).</p>
-
-        <p class="content">Discuss the advantages and disadvantages of each format for long-term storage of the content type you chose.  Be sure to consider threats according to the following risk categories we discussed in class (Disclosure, Adoption, Transparency, Self-Documentation, External Dependencies, Impact of Patents, and Technical Protection Mechanisms).</p>
+        <p class="content">Data in this dataset is stored in a CSV file, which is a versatile file format, but is also fairly limited. The Library of Congress notes that the CSV file format has “numerous private specifications exist 
+            for various programs and systems, there is no single 'master' specification for this format.” Storing the data in a CSV file enables the data to be reused in a number of programs without needing to depend 
+            on any proprietary programs. The CSV format is a very common way to transfer tabular data, and is not going to go away any time soon, therefore CSV files are likely to retain widespread support with a variety 
+            of programs and platforms. This file format is very transparent, being readable by humans and machine-processable. Self-documentation for the CSV format is poor, however. There is no way to represent metadata 
+            beyond header row indications, and the Library of Congress recommends an associated codebook that describes the fields.
+        </p>
 
         <p class="subheading">Recommendations for Further Curation</p>
 
-        <p class="content">Based on your assessment, make a recommendation for which formats are suitable for long-term storage, and which should be migrated to more stable formats. </p>
+        <p class="content">"Based on your assessment, make a recommendation for which formats are suitable for long-term storage, and which should be migrated to more stable formats."</p>
 
-        <p class="content">Additionally propose other at least three other forms of curation that this dataset may benefit from. Explain the reason/rationale for your recommendation. Draw on readings from class as appropriate.  Consider who might want to use this dataset, and what properties they consider most significant about each file.</p>
+        <p class="content">"Additionally propose other at least three other forms of curation that this dataset may benefit from. Explain the reason/rationale for your recommendation. Draw on readings from class as appropriate.  Consider who might want to use this dataset, and what properties they consider most significant about each file."</p>
 
-        <p class="heading" id="references">References</p>
-
-        <p class="content">Please enter references in the Harvard style and include a DOI where available, citing them in the text with a number in square brackets, e.g.</p>
+        <h2 id="references">References</h2>
 
         <ol id="sources">
-            <li>Piwowar, H A 2011 Who Shares? Who Doesn't? Factors Associated with Openly Archiving Raw Research Data. PLoS ONE 6(7): e18657. DOI: <a href="http://dx.doi.org/10.1371/journal.pone.0018657">http://dx.doi.org/10.1371/journal.pone.0018657.</a></li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
-            <li>reference</li>
             <li>reference</li>
             <li>reference</li>
             <li>reference</li>

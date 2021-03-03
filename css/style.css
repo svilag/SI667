@@ -5,16 +5,16 @@ body{
     background-color: #D5DFE9;
 }
 
-ul li a{
+nav ul li a{
     text-decoration: none;
     color: white;
 }
 
-ul li a:visited{
+nav ul li a:visited{
     color: yellow;
 }
 
-ul li a:hover{
+nav ul li a:hover{
     border: 2px solid white;
     border-radius: 8px;
     padding: 10px;
@@ -52,17 +52,19 @@ p{
     padding-top: 10px;
 }
 
-.heading{
+h2{
     font-size: 26px;
     background-color: #08427F;
     border-radius: 8px;
     padding-bottom: 10px;
+    padding-top: 10px;
     padding-left: 10px;
     color: white;
 }
 
 .subheading{
     font-size: 20px;
+    color: #08427F;
 }
 
 #authors{
@@ -73,6 +75,17 @@ p{
 .content{
     margin-left: 10px;
     padding-bottom: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-right: 20%;
+}
+
+.content a{
+    color: #08427F;
+}
+
+.content a:visited{
+    color: yellow;
 }
 
 #references{
@@ -84,6 +97,10 @@ p{
     line-height: 2;
 }
 
+#sources a{
+    color: #08427F;
+}
+
 #totop{
     position: fixed;
     right: 5%;
@@ -93,7 +110,7 @@ p{
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid white;
 }
 
 #totop a{
