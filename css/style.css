@@ -33,6 +33,7 @@ h1{
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     padding: 5px;
     color: rgb(255, 255, 255);
 }
@@ -75,13 +76,17 @@ h2{
 .content{
     margin-left: 10px;
     padding-bottom: 10px;
-    line-height: 1.5;
+    line-height: 2;
     text-align: justify;
     margin-right: 20%;
 }
 
 .content a{
     color: #08427F;
+}
+
+.content a:visited{
+    color: yellow;
 }
 
 #references{
